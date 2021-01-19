@@ -4,6 +4,7 @@ import requests
 import json
 import random
 from replit import db
+from server import alive
 
 
 client = discord.Client()
@@ -94,4 +95,5 @@ async def on_message(message):
         await message.channel.send("Response Mode OFF")
 
 
+alive()
 client.run(os.getenv('TOKEN'))
